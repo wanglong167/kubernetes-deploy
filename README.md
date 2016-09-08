@@ -61,7 +61,7 @@ openssl genrsa -out /opt/kubernetes/key/serviceaccount.key 2048
 </pre>
 * 启动etcd、kube-apiserver、kube-controller-manager、kube-scheduler服务
 <pre>
-for SERVICES in etcd kube-apiserver kube-controller-manager kube-scheduler;
+for SERVICES in docker etcd kube-apiserver kube-controller-manager kube-scheduler;
 do
 systemctl restart $SERVICES
 systemctl enable $SERVICES
