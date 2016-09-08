@@ -102,11 +102,10 @@ KUBELET_ARGS=""
 </pre>
 * 启动kube-proxy、kubelet、docker、flanneld服务
 <pre>
-for SERVICES in kube-proxy kubelet docker flanneld; 
-do
-　systemctl restart $SERVICES
-　systemctl enable $SERVICES
-　systemctl status $SERVICES 
+for SERVICES in kube-proxy kubelet docker flanneld; do
+systemctl restart $SERVICES
+systemctl enable $SERVICES
+systemctl status $SERVICES 
 done
 </pre>
 其他节点配置类似
