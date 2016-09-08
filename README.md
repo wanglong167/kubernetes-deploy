@@ -63,9 +63,9 @@ openssl genrsa -out /opt/kubernetes/key/serviceaccount.key 2048
 <pre>
 for SERVICES in etcd kube-apiserver kube-controller-manager kube-scheduler;
 do
-　systemctl restart $SERVICES
-　systemctl enable $SERVICES
-　systemctl status $SERVICES 
+systemctl restart $SERVICES
+systemctl enable $SERVICES
+systemctl status $SERVICES 
 done
 </pre>
 * 在etcd中定义flannel网络配置
